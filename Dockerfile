@@ -13,7 +13,7 @@ RUN npm ci
 COPY . .
 
 # Build the application
-RUN npm run build
+RUN npm exec -- tsx script/build.ts
 
 # Runtime stage
 FROM node:20-alpine
